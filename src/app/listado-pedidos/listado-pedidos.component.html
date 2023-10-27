@@ -1,0 +1,19 @@
+<header class="navbar">
+    <a href="#" class="navbar-brand">Cafetería Cielo Negro</a>
+    <div class="navbar-nav">
+        <a routerLink="/orden" class="navbar-link">Realizar una orden</a>
+        <a routerLink="/pedidos" class="navbar-link">Ver pedidos</a>
+    </div>
+    <h2>Pedidos realizados</h2>
+
+</header>
+<ul class="pedido-list">
+    <li class="pedido-item" *ngFor="let pedido of pedidos">
+      <div class="pedido-details">
+        <span class="pedido-name">{{ pedido.nombre }}</span>
+        <span class="pedido-tipo">{{ pedido.tipoDeCafe }}</span>
+      </div>
+      <span class="pedido-precio">${{ pedido.precio }}</span>
+    </li>
+  </ul>
+  
